@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<!--<suite name="RCS2ApiSuite">
+<suite name="RCS2ApiSuite">
     <listeners>
         <listener class-name="com.tivo.utility.ExtentTestNGIReporterListener" />
     </listeners>
@@ -19,20 +19,20 @@
             <package name="com.tivo.Validators"/>
         </packages>
     </test>
-</suite>-->
-<suite name="RCS2ApiSuite" >
-    <!--<listeners>
+</suite>
+<!--<suite name="RCS2ApiSuite" >
+    &lt;!&ndash;<listeners>
         <listener class-name="com.tivo.utility.ExtentTestNGIReporterListener" />
-    </listeners>-->
+    </listeners>&ndash;&gt;
     <test name="ApiTest">
         <classes>
             <class name="com.tivo.test.VideoParity" >
                 <methods>
                     <include name="validateAiringTransform" />
-                    <!--<include name="validateServiceChannels_200_response" />-->
-                    <!--<include name="validateSource_200_response" />-->
+                    &lt;!&ndash;<include name="validateServiceChannels_200_response" />&ndash;&gt;
+                    &lt;!&ndash;<include name="validateSource_200_response" />&ndash;&gt;
                </methods>
             </class>
         </classes>
     </test>
-</suite>
+</suite>-->
