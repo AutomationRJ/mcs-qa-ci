@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!--<suite name="RCS2ApiSuite">
+    <listeners>
+        <listener class-name="com.tivo.utility.ExtentTestNGIReporterListener" />
+    </listeners>
+    <test name="ApiTest">
+        <groups>
+            <run>
+                <include name="Regression"/>
+                <include name="Sports"/>
+                <include name="Sanity"/>
+                <include name="DigitalFirst"/>
+                <include name="Etag"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.tivo.common"/>
+            <package name="com.tivo.test"/>
+            <package name="com.tivo.Validators"/>
+        </packages>
+    </test>
+</suite>-->
+<suite name="RCS2ApiSuite" >
+    <!--<listeners>
+        <listener class-name="com.tivo.utility.ExtentTestNGIReporterListener" />
+    </listeners>-->
+    <test name="ApiTest">
+        <classes>
+            <class name="com.tivo.test.VideoParity" >
+                <methods>
+                    <include name="validateAiringTransform" />
+                    <!--<include name="validateServiceChannels_200_response" />-->
+                    <!--<include name="validateSource_200_response" />-->
+               </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
