@@ -53,6 +53,17 @@ public class ExtentTestNGIReporterListener implements IReporter {
     private void init() {
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date();
+        File OutputFolder = new File(OUTPUT_FOLDER);
+        if (!OutputFolder.exists()) {
+            if(OutputFolder.mkdir()) {
+                System.out.println("Directory is created!");
+            }
+            else  {
+                System.out.println("Failed to create Directory");
+            }
+        }else {
+            System.out.println("Diretory already exists");
+        }
         ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(OUTPUT_FOLDER + (FILE_NAME + (df.format(date)).toString() + ".html"));
         htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
         htmlReporter.config().setChartVisibilityOnOpen(true);
